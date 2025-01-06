@@ -7,7 +7,7 @@ import os
 st.write(f"Current Working Directory: {os.getcwd()}")
 
 # Construct the full path to the model file
-model_path = os.path.join(os.getcwd(), "SLReg.joblib")
+model_path = os.path.join(os.getcwd(), "second_Task/SLReg.joblib")
 
 # Debug: Check if the file exists
 if os.path.isfile(model_path):
