@@ -3,7 +3,7 @@ import numpy as np
 import joblib
 
 # Load your model
-model = joblib.load(r"C:\Users\LENOVO\Desktop\Orinson\Orinson-Technologies-Winter-Internship\second_Task\SLReg.joblib")
+model = joblib.load("SLReg.joblib")
 
 # Streamlit App Title
 st.title("Salary Predictor")
