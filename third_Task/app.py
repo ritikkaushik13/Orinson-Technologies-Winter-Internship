@@ -1,9 +1,27 @@
 import streamlit as st
 import joblib
 import numpy as np
+import os
 
-# Load the trained model
-model = joblib.load("House_Pricing.joblib")
+st.write(f"Current Working Directory: {os.getcwd()}")
+
+# Construct the full path to the model file
+model_path = os.path.join(os.getcwd(), "House_Pricing.joblib")
+
+# Debug: Check if the file exists
+if os.path.isfile(model_path):
+    st.write(f"Model file found at: {model_path}")
+else:
+    st.error(f"Model file not found at: {model_path}")
+
+# Load your model
+try:
+    model = joblib.load(model_path)
+    st.success("Model loaded successfully!")
+except FileNotFoundError:
+    st.error(f"Model file not found: {model_path}. Please ensure it exists.")
+except Exception as e:
+    st.error(f"An error occurred while loading the model: {e}")
 
 # Streamlit app
 st.title("California Housing Price Prediction App")
