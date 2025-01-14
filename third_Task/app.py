@@ -6,7 +6,7 @@ import os
 st.write(f"Current Working Directory: {os.getcwd()}")
 
 # Construct the full path to the model file
-model_path = os.path.join(os.getcwd(), "House_Pricing.joblib")
+model_path = os.path.join(os.getcwd(), "third_Task/House_Pricing.joblib")
 
 # Debug: Check if the file exists
 if os.path.isfile(model_path):
